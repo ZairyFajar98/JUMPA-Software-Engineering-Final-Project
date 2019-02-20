@@ -1,6 +1,7 @@
 JUMPA
 
-The final project of my Software Engineering course on 2018
+This is the final project of my Software Engineering course on 2018
+
 JUMPA is a web-based application for making and maintaining appointments between two people, in which both parties can compose and/or negotiate their appointment requests/invitations in JUMPA website and they will get email notifications for every update made to their appointments. URL : https://jumpa-842c1.firebaseapp.com/
 
 How to Use :
