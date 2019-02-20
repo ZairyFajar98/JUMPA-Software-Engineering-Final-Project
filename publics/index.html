@@ -1,0 +1,339 @@
+<!doctype html>
+
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Jumpa.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>JUMPA</title>
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-light_blue.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  
+  <body>
+    <!-- Bagian Header -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+            <span class="android-title mdl-layout-title">
+              <img id="logoBtn" class="android-logo-image" src="images/jumpa-logo.jpg">
+            </span>
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <div hidden id="menuNav"> 
+                <a class="compMenuBtn mdl-navigation__link mdl-typography--text-uppercase">COMPOSE</a>
+                <a class="negoMenuBtn mdl-navigation__link mdl-typography--text-uppercase">NEGOTIATE</a>
+                <a class="upcoMenuBtn mdl-navigation__link mdl-typography--text-uppercase">UPCOMING</a>
+                <a class="histMenuBtn mdl-navigation__link mdl-typography--text-uppercase">HISTORY</a>
+                <img src="images/account-pic.png">
+                <a class="nama-user"></a>
+              </div>
+              <button id="signoutBtn" hidden class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                SIGN-OUT
+              </button>
+              <!-- Saat belum login --> 
+              <button id="signinBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                SIGN-IN
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- Landing page ( belum login ) -->
+      <div id="notLogInt" class="android-content mdl-layout__content">
+        <div class="android-be-together-section mdl-typography--text-center">
+            <div class="logo-font android-slogan">mau JUMPA? ayo JUMPA.</div>
+            <div class="logo-font android-sub-slogan">welcome to JUMPA... make appointment to others. manage yours, see what's going on.</div>
+        </div>
+      </div>
+
+      <!-- Landing page ( sudah login ) -->
+      <div id="logInt" hidden class="android-content mdl-layout__content">
+                
+        <!-- tampilan home page -->
+        <div id="home" class="android-more-section home-section">
+          <div class="android-section-title mdl-typography--display-1-color-contrast">Feature from JUMPA</div>
+          <div class="android-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/more-1.jpeg">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Make an appointment</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Make appointment to other people you want to meet, decide the place and date, and your purposes.</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="compMenuBtn android-link mdl-button mdl-js-button mdl-typography--text-uppercase">
+                   Compose
+                   <i class="material-icons">chevron_right</i>
+                 </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/more-2.jpeg">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Edit your appointment</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">See appointment you sent or received that has not been agreed, edit, and if agree, accept it.</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="negoMenuBtn android-link mdl-button mdl-js-button mdl-typography--text-uppercase">
+                   Negotiate
+                   <i class="material-icons">chevron_right</i>
+                 </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/more-3.jpg">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">See upcoming appointment details</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">A list of upcoming appointment that has been agreed, export to your Google Calendar if you want.</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="upcoMenuBtn android-link mdl-button mdl-js-button mdl-typography--text-uppercase">
+                   Upcoming
+                   <i class="material-icons">chevron_right</i>
+                 </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/more-4.jpg">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">See your appointment history</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">A list of appointment that has benn finished, you can delete it if you want.</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="histMenuBtn android-link mdl-button mdl-js-button mdl-typography--text-uppercase">
+                   History
+                   <i class="material-icons">chevron_right</i>
+                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu page -->
+        <div class="android-customized-section">     
+          <!-- compose page -->
+          <div id="menuComp" hidden >
+            <div class="menu-judul mdl-typography--font-light mdl-typography--display-1-color-contrast">Compose appointment</div>
+            
+            <form id="compForm" onreset="return sendForm()">
+              <div id="form-box">
+                <div>
+                  Your name: <input disabled type="text" name="name">
+                  Intended person email: <input type="email" name="intemail">
+                  Purposes: <textarea name="purposes"></textarea>
+                </div>
+                <div>
+                  Date: <input type="date" name="date">
+                  Time: <input type="time" name="time">
+                  Location: <input type="text" name="location" id="search_location" placeholder="location..">        
+                </div>
+              </div>
+              <div>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="reset"> 
+                  <i class="material-icons tombol">
+                    send
+                  </i>  
+                  SEND </button>
+              </div>
+            </form>
+            <button id="cancelComp" class="mdl-button mdl-button--accent"> 
+                <i class="material-icons tombol">
+                  cancel
+                </i>  
+                CANCEL </button>
+          </div>
+      
+          <!-- negotiating page -->
+          <div id="menuNego" hidden >
+            <div class="menu-judul mdl-typography--font-light mdl-typography--display-1-color-contrast">Negotiate appointment</div>
+            <table class="mdl-shadow--2dp">
+              <thead>
+                <tr>
+                    <th> With </th>
+                    <th> Location </th>
+                    <th> Date </th>
+                    <th> Time </th>
+                    <th> Action </th>
+                </tr>
+              </thead>
+              <tbody>    
+              </tbody>
+            </table>
+          </div>
+
+          <!-- upcoming page -->
+          <div id="menuUpco" hidden >
+            <div class="menu-judul mdl-typography--font-light mdl-typography--display-1-color-contrast">Upcoming appointment</div>
+            <table class="mdl-shadow--2dp">
+              <thead>
+                <tr>
+                  <th> With </th>
+                  <th> Location </th>
+                  <th> Date </th>
+                  <th> Time </th>
+                  <th> Action </th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- history page -->
+          <div id="menuHist" hidden >
+          <div class="menu-judul mdl-typography--font-light mdl-typography--display-1-color-contrast">Appointment history</div>
+          <table class="mdl-shadow--2dp">
+            <thead>
+              <tr>
+                <th> With </th>
+                <th> Location </th>
+                <th> Date </th>
+                <th> Time </th>
+                <th> Action </th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          </div>
+
+          <!-- info page -->
+          <div id="menuInfo" hidden>
+            <div class="menu-judul mdl-typography--font-light mdl-typography--display-1-color-contrast">Appointment info</div>
+            <!-- <h4> between </h4> -->
+            <form id="infoForm">
+              <div id="info-box">
+                <div>
+                  Sender name: <input readonly type="text" name="name">
+                  Intended person email: <input readonly type="email" name="intemail">
+                  Sender purposes: <textarea readonly name="purposes"> </textarea>
+                  status: <input readonly type="text" name="status">
+                </div>
+                <div>
+                  Date: <input readonly type="date" name="date">
+                  Time: <input readonly type="time" name="time">
+                  Location: <input readonly type="text" name="location">          
+                </div>
+              </div>
+            </form>
+            <button id="infoBackBtn" class="mdl-button mdl-button--accent"> 
+                <i class="material-icons tombol">
+                    arrow_back
+                </i>  
+                BACK </button>
+          </div>
+
+          <!-- edit page -->
+          <div id="menuEdit" hidden >
+            <div class="menu-judul mdl-typography--font-light mdl-typography--display-1-color-contrast">Compose appointment</div>
+            <form id="editForm">
+              <div id="edit-box">
+                <div>
+                  Your name: <input disabled type="text" name="name">
+                  Intended person email: <input disabled type="email" name="intemail">
+                  Purposes: <textarea disabled name="purposes"> </textarea>
+                </div>
+                <div>
+                  Date: <input type="date" name="date">
+                  Time: <input type="time" name="time">
+                  Location: <input type="text" name="location" id="location_edit" placeholder="location..">          
+                </div>
+              </div>
+              <div>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="reset"> 
+                  <i class="material-icons tombol">
+                    send
+                  </i>
+                  SEND </button>
+              </div>
+            </form>
+            <button id="cancelEdit" class="mdl-button mdl-button--accent"> 
+              <i class="material-icons tombol">
+                cancel
+              </i>  
+              CANCEL </button>
+          </div>
+
+        </div>
+        
+        <!-- Footer -->
+        <footer class="android-footer mdl-mega-footer">
+          <div class="mdl-mega-footer--middle-section">
+            <p class="mdl-typography--font-light">Software Engineer Project: © JUMPA 2018, Group Kami</p>
+            <p class="mdl-typography--font-light">Some features may not be available in your browser</p>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      // TODO: Replace with your project's customized code snippet
+      var config = {
+        apiKey: "<API_KEY>",
+        authDomain: "<PROJECT_ID>.firebaseapp.com",
+        databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+        projectId: "<PROJECT_ID>",
+        storageBucket: "<BUCKET>.appspot.com",
+        messagingSenderId: "<SENDER_ID>",
+      };
+      firebase.initializeApp(config);
+    </script>
+    
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="js-files/placessearch.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=_YOURAPIKEY_&libraries=places&callback=activatePlacesSearch"></script>
+    <script src="js-files/unit-test.js"></script>
+    <script src="js-files/action.js"></script>
+    <script src="js-files/menuchange.js"></script>
+    <script src="js-files/table.js"></script>
+    <script src="main.js"></script>
+    
+  </body>
+</html>
